@@ -25,13 +25,13 @@ docker pull jfiguracion94/sms-api:1.0.0
 docker run -p 8080:8080 jfiguracion94/sms-api:1.0.0
 ```
 A successful run should look something like this:
-![](https://github.com/TheLastMonolith/sms-spam-api-doc/blob/main/assets/docker-run.png)
+![](https://raw.githubusercontent.com/TheLastMonolith/sms-spam-api-doc/main/assets/docker-run.png)
 > *Note*: you can add `-d` for detach mode, this will hide the terminal response
 3. Open the application by going to `localhost.8080` in a browser.
 4. Submit the SMS message through the text box form.
 5. Once you click the predict button, it will show a text if it's a spam or ham.
 
-![](https://github.com/TheLastMonolith/sms-spam-api-doc/blob/main/assets/spam-app.gif)
+![](https://raw.githubusercontent.com/TheLastMonolith/sms-spam-api-doc/main/assets/spam-app.gif)
 
 #### Request Parameters
 No request parameters are required.
@@ -82,7 +82,7 @@ POST /predict_api HTTP/1.1" 200 -
   "prediction": "SPAM!"
 }
 ```
-![](https://github.com/TheLastMonolith/sms-spam-api-doc/blob/main/assets/predict_api.png)
+![](https://raw.githubusercontent.com/TheLastMonolith/sms-spam-api-doc/main/assets/predict_api.png)
 
 ### Conclusion
 This API provides two endpoints: one for rendering results on an HTML GUI and another for direct API calls. By sending a POST request to the appropriate endpoint, you can obtain the classification result in the response.
