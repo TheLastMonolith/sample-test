@@ -73,7 +73,7 @@ docker run -p 8080:8080 jfiguracion94/sms-api:1.0.0
 ```
 
 #### Response Example (/predict_api)
-The response is an HTML page containing the classification result once you click the **predict** button  
+The response will write classification result on your terminal  
 Example:
 ```
 POST /predict_api HTTP/1.1" 200 -
