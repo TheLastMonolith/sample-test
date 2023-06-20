@@ -26,7 +26,7 @@ docker run -p 8080:8080 jfiguracion94/sms-api:1.0.0
 ```
 A successful run should look something like this:
 ![](https://github.com/TheLastMonolith/sms-spam-detection/blob/main/assets/docker-run.png)
-> *Note*: you can add `-d` for detach mode to hide the terminal response
+> *Note*: you can add `-d` for detach mode, this will hide the terminal response
 3. Open the application by going to `localhost.8080` in a browser.
 4. Submit the SMS message through the text box form.
 5. Once you click the predict button, it will show a text if it's a spam or ham.
@@ -61,6 +61,33 @@ POST /predict_api
 ```
 docker run -p 8080:8080 jfiguracion94/sms-api:1.0.0
 ```
-2. 
+2. Open another terminal, `cd` to the same directory you saved the **app** folder.
+3. Run `python request.py`
+4. It will print the prediction of the input sms form the `request.py`
+   
+#### Request Example
+```
+{
+  "sms" : "Congratulations! You have won a free trip to the Bahamas. Reply to claim your prize."
+}
+```
+
+#### Response Example (/predict_api)
+The response is an HTML page containing the classification result once you click the **predict** button  
+Example:
+```
+POST /predict_api HTTP/1.1" 200 -
+
+{
+  "prediction": "SPAM!"
+}
+```
+![](https://github.com/TheLastMonolith/sms-spam-detection/blob/main/assets/predict_api.png)
+
 ### Conclusion
-This API provides am endpoint that allows for rendering results on an HTML GUI. By sending a POST request to the appropriate endpoint, you can obtain the classification result in the response.
+This API provides two endpoints: one for rendering results on an HTML GUI and another for direct API calls. By sending a POST request to the appropriate endpoint, you can obtain the classification result in the response.
+
+### Author  
+Joseph Figuracion  
+  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/josephfiguracion/)
